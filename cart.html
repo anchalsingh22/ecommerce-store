@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+
+<h1>My Cart</h1>
+
+<table border="1">
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+    </tr>
+
+    <tbody id="cart-items"></tbody>
+</table>
+
+<h2 id="total">Total: ₹0</h2>
+
+
+<a href="/place-order">
+    <button>Checkout</button>
+</a>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cartItems = document.getElementById("cart-items");
+let total = 0;
+
+cart.forEach(item => {
+
+    let row = document.createElement("tr");
+
+    row.innerHTML = `
+        <td>${item.product}</td>
+        <td>${item.price}</td>
+    `;
+
+    cartItems.appendChild(row);
+
+    total += Number(item.price.replace("₹",""));
+});
+
+document.getElementById("total").innerText =
+    "Total: ₹" + total;
+</script>
+
+
+</body>
+</html>

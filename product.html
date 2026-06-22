@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <h2 id="price"></h2>
+    <p id="description"></p>
+
+    <button>Add to Cart</button>
+    <button id="order-btn">Place Order</button>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const product = params.get("product");
+
+        if(product === "watch"){
+            document.getElementById("name").innerText = "Watch";
+            document.getElementById("price").innerText = "₹999";
+            document.getElementById("description").innerText = "Stylish wrist watch.";
+        }
+
+        else if(product === "headphones"){
+            document.getElementById("name").innerText = "Headphones";
+            document.getElementById("price").innerText = "₹1499";
+            document.getElementById("description").innerText = "Wireless headphones.";
+        }
+
+        else if(product === "mobile"){
+            document.getElementById("name").innerText = "Mobile Phone";
+            document.getElementById("price").innerText = "₹15999";
+            document.getElementById("description").innerText = "Latest smartphone.";
+        }
+
+        else if(product === "laptop"){
+            document.getElementById("name").innerText = "Laptop";
+            document.getElementById("price").innerText = "₹45999";
+            document.getElementById("description").innerText = "High performance laptop.";
+        }
+
+        document.getElementById("order-btn").onclick = function(){
+            alert("Order Placed Successfully!");
+        };
+
+    </script>
+
+</body>
+</html>

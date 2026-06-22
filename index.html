@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</div>
+
+<a href="cart.html">Go To Cart</a>
+<div>
+    <a href="login.html">Login</a>
+    </div>
+    <div>
+    <a href="register.html">Register</a>
+    </div>
+    <div>
+    <a href="cart.html">Cart</a>
+    </div>
+
+    <nav>
+        <h2>ShopEasy</h2>
+        <ul>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <p>Best Products For You</p>
+        <h3>Cart Items: <span id="cart-count">0</span></h3>
+    </header>
+
+    <section class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Watch">
+            <h2>Watch</h2>
+            <p>₹999</p>
+            <button class="add-cart">Add to Cart</button>
+            <a href="product.html?product=watch">
+                <button>View Details</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Headphones">
+            <h2>Headphones</h2>
+            <p>₹1499</p>
+            <button class="add-cart">Add to Cart</button>
+            <a href="product.html?product=headphones">
+                <button>View Details</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300" alt="Mobile">
+            <h2>Mobile Phone</h2>
+            <p>₹15999</p>
+            <button class="add-cart">Add to Cart</button>
+            <a href="product.html?product=mobile">
+                <button>View Details</button>
+            </a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300" alt="Laptop">
+            <h2>Laptop</h2>
+            <p>₹45999</p>
+            <button class="add-cart">Add to Cart</button>
+            <a href="product.html?product=laptop">
+                <button>View Details</button>
+            </a>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <form action="/submit" method="POST">
+
+            <label>Name:</label><br>
+            <input type="text" name="name" required><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Message:</label><br>
+            <textarea name="message" rows="5" cols="30"></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 ShopEasy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
